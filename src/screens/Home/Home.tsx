@@ -4,6 +4,7 @@ import {
   Avatar,
   Background,
   BlurItem,
+  Credits,
   Education,
   Intro,
   Skill,
@@ -66,6 +67,7 @@ function Home({}: HomeProps) {
             />
             <Title text="Trainings & Education" />
             <Education education={EDUCATION} />
+            <Credits />
           </View>
         </View>
       </ScrollView>
