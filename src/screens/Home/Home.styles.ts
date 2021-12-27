@@ -6,6 +6,10 @@ const styles = StyleSheet.create({
     alignItems: "center",
     paddingHorizontal: 20,
   },
+  scrollWrapper: {
+    paddingTop: 30,
+    paddingBottom: 80,
+  },
 });
 
 export default styles;

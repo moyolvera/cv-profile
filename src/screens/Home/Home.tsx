@@ -21,7 +21,7 @@ function Home({}: HomeProps) {
   return (
     <Background>
       <StatusBar translucent />
-      <ScrollView contentContainerStyle={{ paddingTop: 30, paddingBottom: 80 }}>
+      <ScrollView contentContainerStyle={styles.scrollWrapper}>
         <View style={styles.wrapper}>
           <View style={COMMON_STYLES.fullWidth}>
             <Avatar name="Moy Olvera" title="REACT NATIVE DEVELOPER" />
