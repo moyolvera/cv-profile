@@ -2,17 +2,11 @@ import React from "react";
 import { View, Text } from "react-native";
 import { Feather } from "@expo/vector-icons";
 import BlurItem from "../BlurItem/BlurItem";
-import { WIDTH } from "../../constants";
 import styles from "./WhatCanIDo.styles";
 import COMMON_STYLES from "../../theme/theme";
+import { Capability } from "../../types/types";
 
-type Capability = {
-  name: string;
-  icon: keyof typeof Feather.glyphMap;
-  description: string;
-};
-
-interface WhatCanIDoProps {
+export interface WhatCanIDoProps {
   mainSkill: Capability;
   secondSkill: Capability;
   thirdSkill: Capability;

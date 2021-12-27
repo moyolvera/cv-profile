@@ -1,7 +1,7 @@
 import React from "react";
 import { BlurView } from "expo-blur";
 import { LinearGradient } from "expo-linear-gradient";
-import { View, ImageBackground, Platform } from "react-native";
+import { View, ImageBackground, Platform, StatusBar } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import styles, {
   GRADIENT_COLORS,
@@ -41,6 +41,7 @@ function Wrapper({ isImage, children }: WrapperProps) {
 function Background({ children }: BackgroundProps) {
   return (
     <View style={styles.wrapper}>
+      <StatusBar barStyle="light-content" />
       <SafeAreaView>
         <LinearGradient
           colors={GRADIENT_COLORS}

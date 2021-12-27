@@ -9,7 +9,9 @@ import {
   Social,
   Title,
   WhatCanIDo,
+  WorkExperience,
 } from "../../components";
+import { ABOUT, WHAT_CAN_I_DO, WORK_EXPERIENCE } from "../../data/data";
 import COMMON_STYLES from "../../theme/theme";
 import styles from "./Home.styles";
 
@@ -29,34 +31,10 @@ function Home({}: HomeProps) {
             />
             <Title text="About me" />
             <BlurItem>
-              <Intro
-                about="Currently working at Luxoft, I have +4 years of experience in React
-      Native, and +5 as a software developer."
-              />
+              <Intro about={ABOUT} />
             </BlurItem>
             <Title text="What can I do" />
-            <WhatCanIDo
-              mainSkill={{
-                name: "Mobile\nDevelopment",
-                icon: "smartphone",
-                description: "",
-              }}
-              secondSkill={{
-                name: "Automated\nTesting",
-                icon: "check-circle",
-                description: "",
-              }}
-              thirdSkill={{
-                icon: "pen-tool",
-                name: "UI/UX",
-                description: "",
-              }}
-              fourthSkill={{
-                icon: "settings",
-                name: "Performance",
-                description: "",
-              }}
-            />
+            <WhatCanIDo {...WHAT_CAN_I_DO} />
             <Title text="Skills" />
             <ScrollView horizontal showsHorizontalScrollIndicator={false}>
               <Skill title="Typescript" percentage={84} color="#2d7ac7" />
@@ -68,6 +46,8 @@ function Home({}: HomeProps) {
               <Skill title="AWS" percentage={70} color="#f89903" />
               <Skill title="PHP & mySQL" percentage={70} color="#8993c1" />
             </ScrollView>
+            <Title text="Work Experience" />
+            <WorkExperience experience={WORK_EXPERIENCE} />
           </View>
         </View>
       </ScrollView>

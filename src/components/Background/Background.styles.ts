@@ -9,6 +9,7 @@ export const GRADIENT_LOCATIONS = [0, 0.1, 0.9];
 const styles = StyleSheet.create({
   wrapper: {
     flex: 1,
+    backgroundColor: "#000",
     alignItems: "center",
     justifyContent: "center",
   },
