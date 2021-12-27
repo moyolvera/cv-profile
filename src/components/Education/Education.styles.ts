@@ -1,4 +1,5 @@
 import { StyleSheet } from "react-native";
+import { WIDTH } from "../../constants";
 
 const styles = StyleSheet.create({
   item: {
@@ -31,6 +32,11 @@ const styles = StyleSheet.create({
     flex: 1,
     padding: 10,
     backgroundColor: "#00b8cb0f",
+  },
+  description: {
+    fontSize: 10,
+    width: WIDTH / 2,
+    color: "#fff",
   },
 });
 

@@ -27,6 +27,9 @@ function Education({ education }: EducationProps) {
               <Text style={styles.location}> • </Text>
               <Text style={styles.location}>{item.location}</Text>
             </Text>
+            {!!item.description && (
+              <Text style={styles.description}>{item.description}</Text>
+            )}
           </View>
         </View>
       ))}
