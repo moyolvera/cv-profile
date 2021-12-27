@@ -4,6 +4,7 @@ import {
   Avatar,
   Background,
   BlurItem,
+  Education,
   Intro,
   Skill,
   Social,
@@ -11,7 +12,12 @@ import {
   WhatCanIDo,
   WorkExperience,
 } from "../../components";
-import { ABOUT, WHAT_CAN_I_DO, WORK_EXPERIENCE } from "../../data/data";
+import {
+  ABOUT,
+  EDUCATION,
+  WHAT_CAN_I_DO,
+  WORK_EXPERIENCE,
+} from "../../data/data";
 import COMMON_STYLES from "../../theme/theme";
 import styles from "./Home.styles";
 
@@ -48,6 +54,8 @@ function Home({}: HomeProps) {
             </ScrollView>
             <Title text="Work Experience" />
             <WorkExperience experience={WORK_EXPERIENCE} />
+            <Title text="Trainings & Education" />
+            <Education education={EDUCATION} />
           </View>
         </View>
       </ScrollView>

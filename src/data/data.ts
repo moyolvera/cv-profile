@@ -1,5 +1,5 @@
 import { WhatCanIDoProps } from "../components/WhatCanIDo/WhatCanIDo";
-import { WorkExperienceItem } from "../types/types";
+import { EducationItem, WorkExperienceItem } from "../types/types";
 
 export const ABOUT =
   "Currently working at Luxoft, I have +4 years of experience in ReactNative, and +5 as a software developer.";
@@ -81,5 +81,59 @@ export const WORK_EXPERIENCE: WorkExperienceItem[] = [
     date: "2016 - 2017",
     location: "AGS, MX",
     year: 2016,
+  },
+];
+
+export const EDUCATION: EducationItem[] = [
+  {
+    id: "1-luxoft",
+    year: "2021",
+    title: "Epic React",
+    description: "",
+    location: "Luxoft",
+    colors: {
+      enfasis: "#faca16",
+    },
+  },
+  {
+    id: "2-tcp",
+    year: "2020",
+    title: "React Native Optimization",
+    description: "",
+    location: "TimeClock Plus",
+    colors: {
+      enfasis: "#00b8cb",
+    },
+  },
+  {
+    id: "3-itexico",
+    year: "2019",
+    title: "Docker",
+    description: "",
+    location: "Improving",
+    colors: {
+      enfasis: "#faca16",
+    },
+  },
+  {
+    id: "4-uaa",
+    year: "2018",
+    title: "MQTT & GPS",
+    description:
+      "Generic model for the location and tracking of vehicles using MQTT & GPS.\nThesis, UAA.",
+    location: "UAA",
+    colors: {
+      enfasis: "#00b8cb",
+    },
+  },
+  {
+    id: "5-uaa",
+    year: "2013-2018",
+    title: "Intelligent Computation Engineer",
+    description: "My CS degree, UAA.",
+    location: "UAA",
+    colors: {
+      enfasis: "#faca16",
+    },
   },
 ];

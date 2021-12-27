@@ -47,7 +47,7 @@ const styles = StyleSheet.create({
     width: WIDTH / 2 + 20,
   },
   blurInner: {
-    padding: 10,
+    padding: 14,
   },
 });
 

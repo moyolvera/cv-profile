@@ -15,3 +15,12 @@ export type WorkExperienceItem = {
   location: string;
   year: number;
 };
+
+export type EducationItem = {
+  id: string;
+  year: string;
+  title: string;
+  description: string;
+  location: string;
+  colors: { enfasis: string };
+};
