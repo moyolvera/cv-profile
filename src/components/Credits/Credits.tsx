@@ -8,7 +8,7 @@ function Credits({}: CreditsProps) {
   return (
     <View style={styles.wrapper}>
       <Image
-        source={require("../../../assets/labs-logo.png")}
+        source={require("../../../assets/logo.png")}
         style={styles.image}
       />
       <Text style={styles.text}>{new Date().getFullYear()}</Text>
