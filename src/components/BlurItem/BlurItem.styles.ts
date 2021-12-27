@@ -8,7 +8,7 @@ const styles = StyleSheet.create({
     width: "100%",
   },
   wrapper: {
-    borderRadius: 10,
+    borderRadius: 6,
     borderWidth: 1,
     borderColor: "#00b8cb5f",
     overflow: "hidden",

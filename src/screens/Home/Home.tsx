@@ -11,6 +11,7 @@ import {
   Title,
   WhatCanIDo,
   WorkExperience,
+  Works,
 } from "../../components";
 import {
   ABOUT,
@@ -40,7 +41,12 @@ function Home({}: HomeProps) {
               <Intro about={ABOUT} />
             </BlurItem>
             <Title text="What can I do" />
-            <WhatCanIDo {...WHAT_CAN_I_DO} />
+            <WhatCanIDo
+              mainSkill={WHAT_CAN_I_DO.mainSkill}
+              secondSkill={WHAT_CAN_I_DO.secondSkill}
+              thirdSkill={WHAT_CAN_I_DO.thirdSkill}
+              fourthSkill={WHAT_CAN_I_DO.fourthSkill}
+            />
             <Title text="Skills" />
             <ScrollView horizontal showsHorizontalScrollIndicator={false}>
               <Skill title="Typescript" percentage={84} color="#2d7ac7" />
@@ -54,6 +60,10 @@ function Home({}: HomeProps) {
             </ScrollView>
             <Title text="Work Experience" />
             <WorkExperience experience={WORK_EXPERIENCE} />
+            <Works
+              title="WORKS"
+              description="Check a collection with my most important works"
+            />
             <Title text="Trainings & Education" />
             <Education education={EDUCATION} />
           </View>

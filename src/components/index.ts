@@ -8,6 +8,7 @@ import Social from "./Social/Social";
 import Title from "./Title/Title";
 import WhatCanIDo from "./WhatCanIDo/WhatCanIDo";
 import WorkExperience from "./WorkExperience/WorkExperience";
+import Works from "./Works/Works";
 
 export {
   Avatar,
@@ -20,4 +21,5 @@ export {
   Title,
   WhatCanIDo,
   WorkExperience,
+  Works,
 };
