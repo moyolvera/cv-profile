@@ -1,5 +1,5 @@
 import { WhatCanIDoProps } from "../components/WhatCanIDo/WhatCanIDo";
-import { EducationItem, WorkExperienceItem } from "../types/types";
+import { DogItemType, EducationItem, WorkExperienceItem } from "../types/types";
 
 export const ABOUT =
   "Currently working at Luxoft, I have +4 years of experience in ReactNative, and +5 as a software developer.";
@@ -134,6 +134,33 @@ export const EDUCATION: EducationItem[] = [
     location: "UAA",
     colors: {
       enfasis: "#faca16",
+    },
+  },
+];
+
+export const DOGS_DATA: DogItemType[] = [
+  {
+    id: "1-kenai",
+    name: "Kenai",
+    date: "2017-2019",
+    smallDescription:
+      'Kenai was the only one to win the "Best Dog of the World" award twice. He was a mix of blue heleer and german shepperd',
+    description: `Birthday: 1st of February, 2017 \n\nHe was my first own dog and I loved him aswell as my whole family. The impact of his life has been so profound that I can't imagine how I ever lived without him. He changed me and my family for good, since then my family and me understand the love and importance of this little friends who are grown to be another member of the family.\n\nHe died in an accident in the middle of the summer of 2019, but we will always remember him and his memory.`,
+    pictures: {
+      main: require("../../assets/dogs/kenai.png"),
+      second: require("../../assets/dogs/kenai-2.png"),
+    },
+  },
+  {
+    id: "2-koda",
+    name: "Koda",
+    date: "2019",
+    smallDescription:
+      "Little brother of Kenai, Koda is a blue heeler, he is the most loyal and protective buddy.",
+    description: `Birthday: 3rd of May, 2019 \n\nHe was my first own dog and I loved him aswell as my whole family. The impact of his life has been so profound that I can't imagine how I ever lived without him. He changed me and my family for good, since then my family and me understand the love and importance of this little friends who are grown to be another member of the family.`,
+    pictures: {
+      main: require("../../assets/dogs/koda.png"),
+      second: require("../../assets/dogs/koda-2.png"),
     },
   },
 ];

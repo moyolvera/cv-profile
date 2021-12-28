@@ -13,13 +13,16 @@ import { HEIGHT, WIDTH } from "../../constants";
 import COMMON_STYLES from "../../theme/theme";
 import DogTitle from "../DogTitle/DogTitle";
 import styles from "./DogItem.styles";
+import { DogItemType } from "../../types/types";
 
-interface DogItemProps {}
+interface DogItemProps {
+  item: DogItemType;
+}
 
 export const START_GRADIENT = { x: 0.5, y: 0.0 };
 export const END_GRADIENT = { x: 0.5, y: 0.8 };
 
-function DogItem({}: DogItemProps) {
+function DogItem({ item }: DogItemProps) {
   const animation = useSharedValue(HEIGHT - 220);
 
   function toggleAnimation() {
@@ -67,12 +70,12 @@ function DogItem({}: DogItemProps) {
         decelerationRate="fast"
       >
         <Image
-          source={require("../../../assets/dogs/kenai.png")}
+          source={item.pictures.main}
           resizeMode="cover"
           style={COMMON_STYLES.dimensions}
         />
         <Image
-          source={require("../../../assets/dogs/kenai-2.png")}
+          source={item.pictures.second}
           resizeMode="cover"
           style={COMMON_STYLES.dimensions}
         />
@@ -85,15 +88,13 @@ function DogItem({}: DogItemProps) {
           style={styles.gradient}
         >
           <DogTitle
-            name="Kenai"
-            date="2017-2019"
-            description='Kenai was the only one to win the "Best Dog of the World" award twice. He was a mix of blue heleer and german shepperd'
+            name={item.name}
+            date={item.date}
+            description={item.smallDescription}
           />
         </LinearGradient>
         <View style={styles.descriptionWrapper}>
-          <Text style={styles.description}>
-            {`Birthday: 1st of February, 2017 \n\nHe was my first own dog and I loved him aswell as my whole family. The impact of his life has been so profound that I can't imagine how I ever lived without him. He changed me and my family for good, since then my family and me understand the love and importance of this little friends who are grown to be another member of the family.\n\nHe died in an accident in the middle of the summer of 2019, but we will always remember him and his memory.`}
-          </Text>
+          <Text style={styles.description}>{item.description}</Text>
         </View>
       </Animated.View>
       <TouchableOpacity style={styles.button} onPress={toggleAnimation}>

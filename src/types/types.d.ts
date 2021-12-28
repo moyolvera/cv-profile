@@ -1,4 +1,5 @@
 import { Feather } from "@expo/vector-icons";
+import { ImageRequireSource } from "react-native";
 
 export type Capability = {
   name: string;
@@ -23,4 +24,16 @@ export type EducationItem = {
   description: string;
   location: string;
   colors: { enfasis: string };
+};
+
+export type DogItemType = {
+  id: string;
+  name: string;
+  date: string;
+  smallDescription: string;
+  description: string;
+  pictures: {
+    main: ImageRequireSource;
+    second: ImageRequireSource;
+  };
 };
