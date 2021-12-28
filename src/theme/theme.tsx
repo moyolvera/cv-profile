@@ -23,6 +23,9 @@ const COMMON_STYLES = StyleSheet.create({
     justifyContent: "center",
     alignItems: "center",
   },
+  whiteColor: {
+    color: "white",
+  },
 });
 
 export default COMMON_STYLES;

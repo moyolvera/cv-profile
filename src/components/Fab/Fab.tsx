@@ -7,8 +7,13 @@ import Animated, {
   withSpring,
 } from "react-native-reanimated";
 import { MaterialCommunityIcons } from "@expo/vector-icons";
-import { useRoute } from "@react-navigation/native";
+import {
+  NavigationProp,
+  useNavigation,
+  useRoute,
+} from "@react-navigation/native";
 import styles from "./Fab.styles";
+import { RootStackScreensList } from "../../../App";
 
 interface FabProps {}
 
@@ -16,6 +21,7 @@ function Fab({}: FabProps) {
   const animation = useSharedValue(0);
 
   const { name } = useRoute();
+  const { navigate } = useNavigation<NavigationProp<RootStackScreensList>>();
 
   const animatedStyle = useAnimatedStyle(
     () => ({
@@ -36,11 +42,16 @@ function Fab({}: FabProps) {
     }
   }
 
+  function navigateTo(screen: keyof RootStackScreensList) {
+    toggle();
+    navigate(screen);
+  }
+
   const dotIndicatorStyle = useMemo(() => {
     switch (name) {
       case "Home":
         return styles.homeItem;
-      case "Dog":
+      case "Dogs":
         return styles.dogItem;
       case "Personal":
         return styles.userItem;
@@ -56,18 +67,54 @@ function Fab({}: FabProps) {
       <Animated.View style={[styles.container, animatedStyle]}>
         <View style={styles.radio} />
         <View style={[styles.dot, dotIndicatorStyle]} />
-        <View style={styles.archive}>
-          <Feather name="archive" size={26} color="white" />
-        </View>
-        <View style={styles.user}>
-          <Feather name="user" size={26} color="white" />
-        </View>
-        <View style={styles.dog}>
-          <MaterialCommunityIcons name="dog" size={26} color="#fff" />
-        </View>
-        <View style={styles.home}>
-          <MaterialCommunityIcons name="home" size={26} color="#00b8cb" />
-        </View>
+        <TouchableOpacity
+          onPress={function () {
+            navigateTo("Archive");
+          }}
+          style={styles.archive}
+        >
+          <Feather
+            name="archive"
+            size={26}
+            color={name === "Archive" ? "#00b8cb" : "white"}
+          />
+        </TouchableOpacity>
+        <TouchableOpacity
+          onPress={function () {
+            navigateTo("Personal");
+          }}
+          style={styles.user}
+        >
+          <Feather
+            name="user"
+            size={26}
+            color={name === "Personal" ? "#00b8cb" : "white"}
+          />
+        </TouchableOpacity>
+        <TouchableOpacity
+          onPress={function () {
+            navigateTo("Dogs");
+          }}
+          style={styles.dog}
+        >
+          <MaterialCommunityIcons
+            name="dog"
+            size={26}
+            color={name === "Dogs" ? "#00b8cb" : "white"}
+          />
+        </TouchableOpacity>
+        <TouchableOpacity
+          onPress={function () {
+            navigateTo("Home");
+          }}
+          style={styles.home}
+        >
+          <MaterialCommunityIcons
+            name="home"
+            size={26}
+            color={name === "Home" ? "#00b8cb" : "white"}
+          />
+        </TouchableOpacity>
       </Animated.View>
       <TouchableOpacity onPress={toggle} style={styles.menuWrapper}>
         <Feather name="menu" size={20} color="white" />
