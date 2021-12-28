@@ -17,7 +17,7 @@ function App() {
   return (
     <SafeAreaProvider>
       <NavigationContainer>
-        <Stack.Navigator>
+        <Stack.Navigator screenOptions={{ animation: "slide_from_right" }}>
           <Stack.Screen
             name="Home"
             component={Home}
