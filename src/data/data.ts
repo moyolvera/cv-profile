@@ -144,7 +144,7 @@ export const DOGS_DATA: DogItemType[] = [
     name: "Kenai",
     date: "2017-2019",
     smallDescription:
-      'Kenai was the only one to win the "Best Dog of the World" award twice. He was a mix of blue heleer and german shepperd',
+      'Kenai was the only one to win the "Best Dog of the World" award twice. He was a mix of Blue Heleer and German Shepherd',
     description: `Birthday: 1st of February, 2017 \n\nHe was my first own dog and I loved him aswell as my whole family. The impact of his life has been so profound that I can't imagine how I ever lived without him. He changed me and my family for good, since then my family and me understand the love and importance of this little friends who are grown to be another member of the family.\n\nHe died in an accident in the middle of the summer of 2019, but we will always remember him and his memory.`,
     pictures: {
       main: require("../../assets/dogs/kenai.png"),
@@ -159,8 +159,32 @@ export const DOGS_DATA: DogItemType[] = [
       "Little brother of Kenai, Koda is a blue heeler, he is the most loyal and protective buddy.",
     description: `Birthday: 3rd of May, 2019 \n\nHe was my first own dog and I loved him aswell as my whole family. The impact of his life has been so profound that I can't imagine how I ever lived without him. He changed me and my family for good, since then my family and me understand the love and importance of this little friends who are grown to be another member of the family.`,
     pictures: {
-      main: require("../../assets/dogs/koda.png"),
-      second: require("../../assets/dogs/koda-2.png"),
+      main: require("../../assets/dogs/koda-2.png"),
+      second: require("../../assets/dogs/koda.png"),
+    },
+  },
+  {
+    id: "3-cabo",
+    name: "Cabo",
+    date: "2019",
+    smallDescription:
+      "Cabo is a handsome Belgian Shepherd, he is the most playful and kind buddy.",
+    description: `Birthday: 12th of September, 2019 \n\nHe was my first own dog and I loved him aswell as my whole family. The impact of his life has been so profound that I can't imagine how I ever lived without him. He changed me and my family for good, since then my family and me understand the love and importance of this little friends who are grown to be another member of the family.`,
+    pictures: {
+      main: require("../../assets/dogs/cabo-2.png"),
+      second: require("../../assets/dogs/cabo.png"),
+    },
+  },
+  {
+    id: "4-coli",
+    name: "Coli",
+    date: "2020",
+    smallDescription:
+      "Coli mix of Australian Shepherd and Border Collie, he is the most energetic and chubby buddy.",
+    description: `Birthday: 2nd of September, 2020 \n\nHe was my first own dog and I loved him aswell as my whole family. The impact of his life has been so profound that I can't imagine how I ever lived without him. He changed me and my family for good, since then my family and me understand the love and importance of this little friends who are grown to be another member of the family.`,
+    pictures: {
+      main: require("../../assets/dogs/coli-2.png"),
+      second: require("../../assets/dogs/coli.png"),
     },
   },
 ];
