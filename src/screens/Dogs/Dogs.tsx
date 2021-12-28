@@ -1,16 +1,13 @@
 import React from "react";
-import { View, Text } from "react-native";
-import { Background, Fab } from "../../components";
-import COMMON_STYLES from "../../theme/theme";
+import { Background, DogItem, Fab, LargeHeader } from "../../components";
 
 interface DogsProps {}
 
 function Dogs({}: DogsProps) {
   return (
     <Background>
-      <View>
-        <Text style={COMMON_STYLES.whiteColor}>More text</Text>
-      </View>
+      <LargeHeader title="DOGS" subtitle="MY" />
+      <DogItem />
       <Fab />
     </Background>
   );

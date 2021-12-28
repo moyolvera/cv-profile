@@ -1,8 +1,13 @@
 import { StyleSheet } from "react-native";
+import { HEIGHT, WIDTH } from "../constants";
 
 const COMMON_STYLES = StyleSheet.create({
   flex: {
     flex: 1,
+  },
+  dimensions: {
+    width: WIDTH,
+    height: HEIGHT,
   },
   paddingHorizontal: {
     paddingHorizontal: 20,
