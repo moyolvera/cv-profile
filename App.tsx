@@ -1,8 +1,9 @@
 import * as React from "react";
 import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
-import { Archive, Dogs, Home, Personal } from "./src/screens";
 import { SafeAreaProvider } from "react-native-safe-area-context";
+import * as SplashScreen from "expo-splash-screen";
+import { Archive, Dogs, Home, Personal } from "./src/screens";
 
 export type RootStackScreensList = {
   Home: undefined;
@@ -14,9 +15,33 @@ export type RootStackScreensList = {
 const Stack = createNativeStackNavigator<RootStackScreensList>();
 
 function App() {
+  const [isReady, setIsReady] = React.useState(false);
+
+  React.useEffect(() => {
+    async function prepare() {
+      try {
+        await SplashScreen.preventAutoHideAsync();
+      } catch (error) {
+        console.warn(error);
+      } finally {
+        setIsReady(true);
+      }
+    }
+
+    prepare();
+  }, []);
+
+  const onNavigationReady = React.useCallback(async () => {
+    try {
+      await SplashScreen.hideAsync();
+    } catch (error) {
+      console.warn(error);
+    }
+  }, [isReady]);
+
   return (
     <SafeAreaProvider>
-      <NavigationContainer>
+      <NavigationContainer onReady={onNavigationReady}>
         <Stack.Navigator screenOptions={{ animation: "slide_from_right" }}>
           <Stack.Screen
             name="Home"
