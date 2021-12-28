@@ -37,6 +37,20 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     alignItems: "center",
   },
+  paginationWrapper: {
+    position: "absolute",
+    top: 20,
+    right: 40,
+    flexDirection: "row",
+    width: 30,
+    justifyContent: "space-around",
+  },
+  dot: {
+    width: 10,
+    height: 10,
+    borderRadius: 10,
+    backgroundColor: "white",
+  },
 });
 
 export default styles;

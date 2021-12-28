@@ -1,10 +1,11 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Image, ScrollView, Text, TouchableOpacity, View } from "react-native";
 import { Feather } from "@expo/vector-icons";
 import { LinearGradient } from "expo-linear-gradient";
 import Animated, {
   Extrapolate,
   interpolate,
+  useAnimatedScrollHandler,
   useAnimatedStyle,
   useSharedValue,
   withTiming,
@@ -22,8 +23,52 @@ interface DogItemProps {
 export const START_GRADIENT = { x: 0.5, y: 0.0 };
 export const END_GRADIENT = { x: 0.5, y: 0.8 };
 
+interface PaginationDotProps {
+  scroll: Animated.SharedValue<number>;
+}
+
+function PaginationDot({ scroll }: PaginationDotProps) {
+  const mainDot = useAnimatedStyle(() => {
+    return {
+      transform: [
+        {
+          scale: interpolate(
+            scroll.value,
+            [-1 * WIDTH, 0 * WIDTH, 1 * WIDTH],
+            [0.4, 1, 0.4],
+            Extrapolate.CLAMP
+          ),
+        },
+      ],
+    };
+  });
+
+  const secondDot = useAnimatedStyle(() => {
+    return {
+      transform: [
+        {
+          scale: interpolate(
+            scroll.value,
+            [0 * WIDTH, 1 * WIDTH, 2 * WIDTH],
+            [0.4, 1, 0.4],
+            Extrapolate.CLAMP
+          ),
+        },
+      ],
+    };
+  });
+
+  return (
+    <View style={styles.paginationWrapper}>
+      <Animated.View style={[styles.dot, mainDot]} />
+      <Animated.View style={[styles.dot, secondDot]} />
+    </View>
+  );
+}
+
 function DogItem({ item }: DogItemProps) {
   const animation = useSharedValue(HEIGHT - 220);
+  const scrollX = useSharedValue(0);
 
   function toggleAnimation() {
     if (animation.value === 200) {
@@ -32,6 +77,10 @@ function DogItem({ item }: DogItemProps) {
       animation.value = withTiming(200);
     }
   }
+
+  const scrollHandler = useAnimatedScrollHandler((event) => {
+    scrollX.value = event.contentOffset.x;
+  });
 
   const animatedStyle = useAnimatedStyle(
     () => ({
@@ -63,11 +112,12 @@ function DogItem({ item }: DogItemProps) {
 
   return (
     <View style={COMMON_STYLES.dimensions}>
-      <ScrollView
+      <Animated.ScrollView
         horizontal
         pagingEnabled
         snapToInterval={WIDTH}
         decelerationRate="fast"
+        onScroll={scrollHandler}
       >
         <Image
           source={item.pictures.main}
@@ -79,7 +129,7 @@ function DogItem({ item }: DogItemProps) {
           resizeMode="cover"
           style={COMMON_STYLES.dimensions}
         />
-      </ScrollView>
+      </Animated.ScrollView>
       <Animated.View style={[styles.infoWrapper, animatedStyle]}>
         <LinearGradient
           colors={["transparent", "black"]}
@@ -92,6 +142,7 @@ function DogItem({ item }: DogItemProps) {
             date={item.date}
             description={item.smallDescription}
           />
+          <PaginationDot scroll={scrollX} />
         </LinearGradient>
         <View style={styles.descriptionWrapper}>
           <Text style={styles.description}>{item.description}</Text>
