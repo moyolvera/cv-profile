@@ -6,6 +6,7 @@ import {
   BlurItem,
   Credits,
   Education,
+  Fab,
   Intro,
   Skill,
   Social,
@@ -71,6 +72,7 @@ function Home({}: HomeProps) {
           </View>
         </View>
       </ScrollView>
+      <Fab />
     </Background>
   );
 }
