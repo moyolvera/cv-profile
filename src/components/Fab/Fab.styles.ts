@@ -1,10 +1,10 @@
-import { StyleSheet } from "react-native";
+import { Platform, StyleSheet } from "react-native";
 import { WIDTH } from "../../constants";
 
 const styles = StyleSheet.create({
   wrapper: {
     position: "absolute",
-    bottom: 50,
+    bottom: Platform.OS === "ios" ? 100 : 50,
     right: -WIDTH / 2 + 50,
     width: "100%",
     justifyContent: "center",
