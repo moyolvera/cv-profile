@@ -171,8 +171,8 @@ export const DOGS_DATA: DogItemType[] = [
       "Cabo is a handsome Belgian Shepherd, he is the most playful and kind buddy.",
     description: `Birthday: 12th of September, 2019 \n\nHe was my first own dog and I loved him aswell as my whole family. The impact of his life has been so profound that I can't imagine how I ever lived without him. He changed me and my family for good, since then my family and me understand the love and importance of this little friends who are grown to be another member of the family.`,
     pictures: {
-      main: require("../../assets/dogs/cabo-2.png"),
-      second: require("../../assets/dogs/cabo.png"),
+      main: require("../../assets/dogs/cabo.png"),
+      second: require("../../assets/dogs/cabo-2.png"),
     },
   },
   {

@@ -41,7 +41,7 @@ function Wrapper({ isImage, children }: WrapperProps) {
 function Background({ children }: BackgroundProps) {
   return (
     <View style={styles.wrapper}>
-      <StatusBar barStyle="light-content" />
+      <StatusBar barStyle="light-content" backgroundColor="black" />
       <SafeAreaView>
         <LinearGradient
           colors={GRADIENT_COLORS}
