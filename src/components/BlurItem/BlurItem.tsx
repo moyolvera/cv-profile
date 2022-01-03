@@ -1,6 +1,6 @@
 import { BlurView } from "expo-blur";
 import React from "react";
-import { View, ViewStyle } from "react-native";
+import { TouchableOpacity, View, ViewStyle } from "react-native";
 import styles from "./BlurItem.styles";
 
 interface BlurItemProps {
@@ -8,17 +8,42 @@ interface BlurItemProps {
   children: React.ReactNode;
   small?: boolean;
   style?: ViewStyle | ViewStyle[];
+  onPress?: () => void;
 }
 
-function BlurItem({ small, children, style, blurStyle }: BlurItemProps) {
+interface WrapperProps {
+  onPress?: () => void;
+  contentStyle?: ViewStyle | ViewStyle[];
+  children: React.ReactNode;
+}
+
+function Wrapper({ onPress, contentStyle, children }: WrapperProps) {
+  return !!onPress ? (
+    <TouchableOpacity onPress={onPress} style={contentStyle}>
+      {children}
+    </TouchableOpacity>
+  ) : (
+    <View style={contentStyle}>{children}</View>
+  );
+}
+
+function BlurItem({
+  small,
+  children,
+  style,
+  blurStyle,
+  onPress,
+}: BlurItemProps) {
+  const wrapperStyle = React.useMemo(() => {
+    return [
+      styles.wrapper,
+      small ? styles.wrapperSmall : styles.wrapperNormal,
+      style,
+    ] as ViewStyle[];
+  }, [small, style]);
+
   return (
-    <View
-      style={[
-        styles.wrapper,
-        small ? styles.wrapperSmall : styles.wrapperNormal,
-        style,
-      ]}
-    >
+    <Wrapper contentStyle={wrapperStyle} onPress={onPress}>
       <BlurView
         tint="dark"
         intensity={10}
@@ -26,7 +51,7 @@ function BlurItem({ small, children, style, blurStyle }: BlurItemProps) {
       >
         {children}
       </BlurView>
-    </View>
+    </Wrapper>
   );
 }
 
