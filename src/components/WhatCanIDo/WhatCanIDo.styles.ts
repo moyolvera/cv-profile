@@ -1,5 +1,5 @@
 import { StyleSheet } from "react-native";
-import { WIDTH } from "../../constants";
+import { HEIGHT, WIDTH } from "../../constants";
 
 const styles = StyleSheet.create({
   wrapper: {
@@ -39,6 +39,17 @@ const styles = StyleSheet.create({
   extraSkillsWrapper: {
     flexDirection: "row",
     justifyContent: "space-between",
+  },
+  closeWrapper: {
+    position: "absolute",
+    bottom: 160,
+    alignSelf: "center",
+    paddingVertical: 10,
+    paddingHorizontal: 20,
+  },
+  close: {
+    fontWeight: "bold",
+    color: "white",
   },
 });
 
