@@ -8,22 +8,26 @@ export const WHAT_CAN_I_DO: WhatCanIDoProps = {
   mainSkill: {
     name: "Mobile\nDevelopment",
     icon: "smartphone",
-    description: "",
+    description:
+      "I can build native mobile applications using React Native.\nI have worked from gathering the requirements to deploying the application to production in both Android and iOS app stores.\nI can work using the latest technologies such as React Native, Redux, TypeScript, Node.js, Express.js, and more.\nI have experience on agile development methodologies such as Scrum, Kanban, and more.\nAnd I have also worked with several different CI/CD tools such as Github Actions and Appcenter.",
   },
   secondSkill: {
     name: "Automated\nTesting",
     icon: "check-circle",
-    description: "",
+    description:
+      "I can write automated tests using Jest and the React Native Testing suite of libraries.\nI have experience with both unit and integration tests.\nI have worked with the more stricts stardars of quality assurance such as code coverage (at least 90%), and code quality.\nI have worked testing code written in class bases components and functional components, testing hooks aswell as testing state management.",
   },
   thirdSkill: {
     icon: "pen-tool",
     name: "UI/UX",
-    description: "",
+    description:
+      "I can design and develop user interfaces and experiences using React Native including awesome animations and gesture based effects using latest technologies like reanimated2.\nI have several projects to showcase my skills in the form of design and development, leaning towards minimalism and simplicity.\nI have experience with the latest design trends such as Material Design, and I have worked with the latest design tools such as Invision, Figma, and more.",
   },
   fourthSkill: {
     icon: "settings",
     name: "Performance",
-    description: "",
+    description:
+      "I can optimize and profile code using React Native's performance tools.\nI can identify potential bottlenecks and implement strategies to prevent and fix them.\nI have a very good uderstanding of the React Native architecture including the new refactor that facebook is building with technologies like JSI\nI have experience with the latest performance tools such as React Native's DevTools, and I have worked with the latest performance tools such as Chrome DevTools, and more",
   },
 };
 
