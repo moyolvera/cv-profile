@@ -2,12 +2,13 @@ import React from "react";
 import { View, Text, TouchableOpacity, Modal, StatusBar } from "react-native";
 import { GestureHandlerRootView } from "react-native-gesture-handler";
 import { Feather } from "@expo/vector-icons";
+import { MotiView } from "moti";
+
 import BlurItem from "../BlurItem/BlurItem";
 import styles from "./WhatCanIDo.styles";
 import COMMON_STYLES from "../../theme/theme";
 import { Capability } from "../../types/types";
 import CanCard from "../CanCard/CanCard";
-import Animated from "react-native-reanimated";
 
 export interface WhatCanIDoProps {
   mainSkill: Capability;
@@ -15,6 +16,17 @@ export interface WhatCanIDoProps {
   thirdSkill: Capability;
   fourthSkill: Capability;
 }
+
+const FROM_ANIMATE_CONFIG = {
+  opacity: 0.6,
+  scale: 1.3,
+  transform: [{ translateY: 10, translateX: 10 }],
+};
+const TO_ANIMATE_CONFIG = {
+  opacity: 1,
+  scale: 1,
+  transform: [{ translateY: 0, translateX: 0 }],
+};
 
 function WhatCanIDo({
   mainSkill,
@@ -33,7 +45,12 @@ function WhatCanIDo({
   return (
     <>
       <View style={styles.wrapper}>
-        <Animated.View style={styles.largeItemWrapper}>
+        <MotiView
+          delay={0}
+          from={FROM_ANIMATE_CONFIG}
+          animate={TO_ANIMATE_CONFIG}
+          style={styles.largeItemWrapper}
+        >
           <BlurItem
             onPress={() => setSelectedSkill(mainSkill)}
             style={[COMMON_STYLES.flex, styles.primaryBackground]}
@@ -42,9 +59,13 @@ function WhatCanIDo({
             <Feather name={mainSkill.icon} size={38} color="#fff" />
             <Text style={styles.mainSkill}>{mainSkill.name}</Text>
           </BlurItem>
-        </Animated.View>
+        </MotiView>
         <View style={styles.secondColumnWrapper}>
-          <Animated.View>
+          <MotiView
+            delay={200}
+            from={FROM_ANIMATE_CONFIG}
+            animate={TO_ANIMATE_CONFIG}
+          >
             <BlurItem
               onPress={() => setSelectedSkill(secondSkill)}
               blurStyle={styles.secondSkillWrapper}
@@ -52,9 +73,12 @@ function WhatCanIDo({
               <Feather name={secondSkill.icon} size={26} color="#fff" />
               <Text style={styles.secondSkill}>{secondSkill.name}</Text>
             </BlurItem>
-          </Animated.View>
+          </MotiView>
           <View style={styles.extraSkillsWrapper}>
-            <Animated.View
+            <MotiView
+              delay={400}
+              from={FROM_ANIMATE_CONFIG}
+              animate={TO_ANIMATE_CONFIG}
               style={[
                 COMMON_STYLES.marginTop20,
                 COMMON_STYLES.center,
@@ -68,8 +92,11 @@ function WhatCanIDo({
               >
                 <Feather name={thirdSkill.icon} size={26} color="#fff" />
               </BlurItem>
-            </Animated.View>
-            <Animated.View
+            </MotiView>
+            <MotiView
+              delay={600}
+              from={FROM_ANIMATE_CONFIG}
+              animate={TO_ANIMATE_CONFIG}
               style={[
                 COMMON_STYLES.marginTop20,
                 COMMON_STYLES.center,
@@ -83,7 +110,7 @@ function WhatCanIDo({
               >
                 <Feather name={fourthSkill.icon} size={26} color="#fff" />
               </BlurItem>
-            </Animated.View>
+            </MotiView>
           </View>
         </View>
       </View>
