@@ -1,38 +1,29 @@
 import React from "react";
-import { View, Text } from "react-native";
+import { View, FlatList, FlatListProps } from "react-native";
+import Animated from "react-native-reanimated";
 import { EducationItem } from "../../types/types";
-import styles from "./Education.styles";
+import EducationItemComponent from "../EducationItem/EducationItemComponent";
+
+const AnimatedFlatList = Animated.createAnimatedComponent(
+  FlatList
+) as React.ComponentClass<Animated.AnimateProps<FlatListProps<EducationItem>>>;
 
 interface EducationProps {
   education: EducationItem[];
 }
 
+function renderItem({ item, index }: { item: EducationItem; index: number }) {
+  return <EducationItemComponent item={item} index={index} />;
+}
+
 function Education({ education }: EducationProps) {
   return (
     <View>
-      {education.map((item) => (
-        <View key={item.id} style={styles.item}>
-          <View
-            style={[
-              styles.enfasis,
-              {
-                backgroundColor: item.colors.enfasis,
-              },
-            ]}
-          />
-          <View style={styles.itemWrapper}>
-            <Text style={styles.year}>{item.year}</Text>
-            <Text>
-              <Text style={styles.title}>{item.title}</Text>
-              <Text style={styles.location}> • </Text>
-              <Text style={styles.location}>{item.location}</Text>
-            </Text>
-            {!!item.description && (
-              <Text style={styles.description}>{item.description}</Text>
-            )}
-          </View>
-        </View>
-      ))}
+      <AnimatedFlatList
+        data={education}
+        renderItem={renderItem}
+        keyExtractor={(item) => item.id}
+      />
     </View>
   );
 }
