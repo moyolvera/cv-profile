@@ -7,6 +7,7 @@ import styles from "./WhatCanIDo.styles";
 import COMMON_STYLES from "../../theme/theme";
 import { Capability } from "../../types/types";
 import CanCard from "../CanCard/CanCard";
+import Animated from "react-native-reanimated";
 
 export interface WhatCanIDoProps {
   mainSkill: Capability;
@@ -32,7 +33,7 @@ function WhatCanIDo({
   return (
     <>
       <View style={styles.wrapper}>
-        <View style={styles.largeItemWrapper}>
+        <Animated.View style={styles.largeItemWrapper}>
           <BlurItem
             onPress={() => setSelectedSkill(mainSkill)}
             style={[COMMON_STYLES.flex, styles.primaryBackground]}
@@ -41,30 +42,48 @@ function WhatCanIDo({
             <Feather name={mainSkill.icon} size={38} color="#fff" />
             <Text style={styles.mainSkill}>{mainSkill.name}</Text>
           </BlurItem>
-        </View>
+        </Animated.View>
         <View style={styles.secondColumnWrapper}>
-          <BlurItem
-            onPress={() => setSelectedSkill(secondSkill)}
-            blurStyle={styles.secondSkillWrapper}
-          >
-            <Feather name={secondSkill.icon} size={26} color="#fff" />
-            <Text style={styles.secondSkill}>{secondSkill.name}</Text>
-          </BlurItem>
+          <Animated.View>
+            <BlurItem
+              onPress={() => setSelectedSkill(secondSkill)}
+              blurStyle={styles.secondSkillWrapper}
+            >
+              <Feather name={secondSkill.icon} size={26} color="#fff" />
+              <Text style={styles.secondSkill}>{secondSkill.name}</Text>
+            </BlurItem>
+          </Animated.View>
           <View style={styles.extraSkillsWrapper}>
-            <BlurItem
-              small
-              onPress={() => setSelectedSkill(thirdSkill)}
-              style={[COMMON_STYLES.marginTop20, COMMON_STYLES.center]}
+            <Animated.View
+              style={[
+                COMMON_STYLES.marginTop20,
+                COMMON_STYLES.center,
+                styles.leftWrapper,
+              ]}
             >
-              <Feather name={thirdSkill.icon} size={26} color="#fff" />
-            </BlurItem>
-            <BlurItem
-              small
-              onPress={() => setSelectedSkill(fourthSkill)}
-              style={[COMMON_STYLES.marginTop20, COMMON_STYLES.center]}
+              <BlurItem
+                small
+                onPress={() => setSelectedSkill(thirdSkill)}
+                style={[COMMON_STYLES.center, COMMON_STYLES.fullWidth]}
+              >
+                <Feather name={thirdSkill.icon} size={26} color="#fff" />
+              </BlurItem>
+            </Animated.View>
+            <Animated.View
+              style={[
+                COMMON_STYLES.marginTop20,
+                COMMON_STYLES.center,
+                styles.rightWrapper,
+              ]}
             >
-              <Feather name={fourthSkill.icon} size={26} color="#fff" />
-            </BlurItem>
+              <BlurItem
+                small
+                onPress={() => setSelectedSkill(fourthSkill)}
+                style={[COMMON_STYLES.center, COMMON_STYLES.fullWidth]}
+              >
+                <Feather name={fourthSkill.icon} size={26} color="#fff" />
+              </BlurItem>
+            </Animated.View>
           </View>
         </View>
       </View>

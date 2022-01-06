@@ -51,6 +51,14 @@ const styles = StyleSheet.create({
     fontWeight: "bold",
     color: "white",
   },
+  leftWrapper: {
+    flex: 1,
+    paddingRight: 5,
+  },
+  rightWrapper: {
+    flex: 1,
+    paddingLeft: 5,
+  },
 });
 
 export default styles;
