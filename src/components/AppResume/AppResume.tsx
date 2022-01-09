@@ -27,10 +27,10 @@ interface AppResumeProps {
 
 function AppResume({ resume, features, specs, previewImages }: AppResumeProps) {
   return (
-    <MotiView from={moti.from} animate={moti.animate} exit={moti.exit}>
+    <MotiView from={moti.from} animate={moti.animate}>
       <Wording wording={resume} />
       <View style={styles.featuresWrapper}>
-        <View style={styles.width120}>
+        <View style={[styles.width120, COMMON_STYLES.center]}>
           <ImagePreview source={previewImages[0]} />
         </View>
         <View style={styles.listWrapper}>
@@ -47,7 +47,7 @@ function AppResume({ resume, features, specs, previewImages }: AppResumeProps) {
             style={COMMON_STYLES.marginTop10}
           />
         </View>
-        <View style={styles.width120}>
+        <View style={[styles.width120, COMMON_STYLES.center]}>
           <ImagePreview source={previewImages[1]} />
         </View>
       </View>

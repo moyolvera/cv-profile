@@ -10,6 +10,7 @@ const styles = StyleSheet.create({
   navigationWrapper: {
     position: "absolute",
     bottom: 10,
+    zIndex: 10,
     width: "100%",
     flexDirection: "row",
     justifyContent: "center",

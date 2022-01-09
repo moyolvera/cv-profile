@@ -14,7 +14,7 @@ const styles = StyleSheet.create({
   },
   specsWrapper: {
     flexDirection: "row",
-    marginTop: 40,
+    marginTop: 20,
   },
 });
 

@@ -35,8 +35,9 @@ function GradientCover({ animatedStyle }: GradientCoverProps) {
           <Animated.View style={animatedStyle}>
             <ItemImage image={require("../../../assets/works/crypta.png")} />
             <ItemImage image={require("../../../assets/works/storify.png")} />
-            <ItemImage image={require("../../../assets/logo.png")} />
-            <ItemImage image={require("../../../assets/logo.png")} />
+            <ItemImage image={require("../../../assets/works/tcp.png")} />
+            <ItemImage image={require("../../../assets/works/simple.png")} />
+            <ItemImage image={require("../../../assets/works/guma.png")} />
           </Animated.View>
         </View>
       </View>

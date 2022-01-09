@@ -5,8 +5,9 @@ const styles = StyleSheet.create({
   wrapper: {
     position: "absolute",
     bottom: Platform.OS === "ios" ? 100 : 50,
-    right: -WIDTH / 2 + 50,
-    width: "100%",
+    right: 20,
+    width: 50,
+    height: 50,
     justifyContent: "center",
     alignItems: "center",
   },

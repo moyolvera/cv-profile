@@ -28,7 +28,13 @@ import styles from "./Archive.styles";
 interface ArchiveProps {}
 
 const ITEM_HEIGHT = 100;
-const snapPointsY = [0, -ITEM_HEIGHT, -2 * ITEM_HEIGHT, -3 * ITEM_HEIGHT];
+const snapPointsY = [
+  0,
+  -ITEM_HEIGHT,
+  -2 * ITEM_HEIGHT,
+  -3 * ITEM_HEIGHT,
+  -4 * ITEM_HEIGHT,
+];
 export const START_GRADIENT = { x: 0.2, y: 0.0 };
 export const END_GRADIENT = { x: 0.2, y: 1 };
 
@@ -85,6 +91,9 @@ function Archive({}: ArchiveProps) {
         animation.value = withSpring(-3 * ITEM_HEIGHT);
         break;
       case -3 * ITEM_HEIGHT:
+        animation.value = withSpring(-4 * ITEM_HEIGHT);
+        break;
+      case -4 * ITEM_HEIGHT:
       default:
         break;
     }
@@ -100,6 +109,9 @@ function Archive({}: ArchiveProps) {
         break;
       case -3 * ITEM_HEIGHT:
         animation.value = withSpring(-2 * ITEM_HEIGHT);
+        break;
+      case -4 * ITEM_HEIGHT:
+        animation.value = withSpring(-3 * ITEM_HEIGHT);
         break;
       case 0:
       default:
@@ -131,7 +143,12 @@ function Archive({}: ArchiveProps) {
         </AnimatePresence>
         <AnimatePresence>
           {index === -3 && (
-            <CoverImage image={require("../../../assets/dogs/coli-2.png")} />
+            <CoverImage image={require("../../../assets/dogs/coli.png")} />
+          )}
+        </AnimatePresence>
+        <AnimatePresence>
+          {index === -4 && (
+            <CoverImage image={require("../../../assets/dogs/cabo.png")} />
           )}
         </AnimatePresence>
       </View>
@@ -160,20 +177,30 @@ function Archive({}: ArchiveProps) {
         <AnimatePresence>
           {index === -2 && (
             <AppResume
-              resume={APPS_INFO[0].resume}
-              features={APPS_INFO[0].features}
-              specs={APPS_INFO[0].specs}
-              previewImages={APPS_INFO[0].previews}
+              resume={APPS_INFO[2].resume}
+              features={APPS_INFO[2].features}
+              specs={APPS_INFO[2].specs}
+              previewImages={APPS_INFO[2].previews}
             />
           )}
         </AnimatePresence>
         <AnimatePresence>
           {index === -3 && (
             <AppResume
-              resume={APPS_INFO[0].resume}
-              features={APPS_INFO[0].features}
-              specs={APPS_INFO[0].specs}
-              previewImages={APPS_INFO[0].previews}
+              resume={APPS_INFO[3].resume}
+              features={APPS_INFO[3].features}
+              specs={APPS_INFO[3].specs}
+              previewImages={APPS_INFO[3].previews}
+            />
+          )}
+        </AnimatePresence>
+        <AnimatePresence>
+          {index === -4 && (
+            <AppResume
+              resume={APPS_INFO[4].resume}
+              features={APPS_INFO[4].features}
+              specs={APPS_INFO[4].specs}
+              previewImages={APPS_INFO[4].previews}
             />
           )}
         </AnimatePresence>
