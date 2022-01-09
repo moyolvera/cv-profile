@@ -9,6 +9,9 @@ const COMMON_STYLES = StyleSheet.create({
     width: WIDTH,
     height: HEIGHT,
   },
+  padding20: {
+    padding: 20,
+  },
   paddingHorizontal: {
     paddingHorizontal: 20,
   },

@@ -37,3 +37,11 @@ export type DogItemType = {
     second: ImageRequireSource;
   };
 };
+
+export type AppWordingResume = {
+  title: string;
+  subtitle: string;
+  intro: string;
+  description: string;
+  link?: string;
+};

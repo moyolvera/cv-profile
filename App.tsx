@@ -4,9 +4,12 @@ import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import { SafeAreaProvider } from "react-native-safe-area-context";
 import * as SplashScreen from "expo-splash-screen";
+import { LogBox } from "react-native";
 import { Archive, Dogs, Home, Personal } from "./src/screens";
 import { GestureHandlerRootView } from "react-native-gesture-handler";
 import COMMON_STYLES from "./src/theme/theme";
+
+LogBox.ignoreLogs(["VirtualizedLists should never be nested"]);
 
 export type RootStackScreensList = {
   Home: undefined;

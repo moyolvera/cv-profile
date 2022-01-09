@@ -161,7 +161,7 @@ export const DOGS_DATA: DogItemType[] = [
     date: "2019",
     smallDescription:
       "Little brother of Kenai, Koda is a blue heeler, he is the most loyal and protective buddy.",
-    description: `Birthday: 3rd of May, 2019 \n\nHe was my first own dog and I loved him aswell as my whole family. The impact of his life has been so profound that I can't imagine how I ever lived without him. He changed me and my family for good, since then my family and me understand the love and importance of this little friends who are grown to be another member of the family.`,
+    description: `Birthday: 3rd of May, 2019 \n\nKoda is very protective, always full of energy and with a strong personality, he's always looking to go out for a walk, for a picnic day or even just a trip in the car.\nHe was the first one to benefit from all the perks and good stuff that Kenai worked so hard to have.\nWe love Koda, we know that he love us back.`,
     pictures: {
       main: require("../../assets/dogs/koda-2.png"),
       second: require("../../assets/dogs/koda.png"),
@@ -173,7 +173,7 @@ export const DOGS_DATA: DogItemType[] = [
     date: "2019",
     smallDescription:
       "Cabo is a handsome Belgian Shepherd, he is the most playful and kind buddy.",
-    description: `Birthday: 12th of September, 2019 \n\nHe was my first own dog and I loved him aswell as my whole family. The impact of his life has been so profound that I can't imagine how I ever lived without him. He changed me and my family for good, since then my family and me understand the love and importance of this little friends who are grown to be another member of the family.`,
+    description: `Birthday: 12th of September, 2019 \n\nCabito is the bigger in size of the 3, but he is the most playful, he will beg you throw him a stick a ball or even a bottle, he just wants something to fetch, and then repeat it 100 times.\nHe is kind, he will always be a good boy, be careful to not hurt you when playing, he's a softy lol.\nHe is so easy to like, so open to receive people and when playing is the most focused dog there is.`,
     pictures: {
       main: require("../../assets/dogs/cabo.png"),
       second: require("../../assets/dogs/cabo-2.png"),
@@ -185,10 +185,81 @@ export const DOGS_DATA: DogItemType[] = [
     date: "2020",
     smallDescription:
       "Coli mix of Australian Shepherd and Border Collie, he is the most energetic and chubby buddy.",
-    description: `Birthday: 2nd of September, 2020 \n\nHe was my first own dog and I loved him aswell as my whole family. The impact of his life has been so profound that I can't imagine how I ever lived without him. He changed me and my family for good, since then my family and me understand the love and importance of this little friends who are grown to be another member of the family.`,
+    description: `Birthday: 2nd of September, 2020 \n\nColi is the little one, the youngest of all. He also loves to fetch, not as Cabo but still, he will always be ready to play with you, he's son energetic that he is always looking for somethong to do, sometimes event things that he doesn't supose to do.\nHe is not a fan of going out and swim like Koda and Cabo, but he will enjoy the sun and all the things out there to sniff and smell.`,
     pictures: {
       main: require("../../assets/dogs/coli-2.png"),
       second: require("../../assets/dogs/coli.png"),
     },
+  },
+];
+
+export const APPS_INFO = [
+  {
+    logo: require("../../assets/works/crypta.png"),
+    cover: require("../../assets/dogs/kenai.png"),
+    specs: [
+      "Typescript",
+      "React Hooks",
+      "React Context",
+      "Reanimated2",
+      "Biometric auth",
+      "i18n localization",
+      "Dark and Light modes",
+      "MMKV local storage",
+      "Data encryption with passprase",
+      "Performant",
+    ],
+    features: [
+      "Store passwords locally with the option to encrypt them",
+      "Restrict app usage with a password or a fingerprint",
+      "Supported spanish and english languages",
+      "Back up your data exporting it to wherever you want",
+    ],
+    resume: {
+      title: "Crypta",
+      subtitle: "A password manager app",
+      intro: "Design and Development entirely by me",
+      link: "https://crypta.app",
+      description:
+        "It let's the user manage them passwords without using any clouds services so he can be sure that the info is always secured in the device",
+    },
+    previews: [
+      require("../../assets/works/crypta-show.png"),
+      require("../../assets/works/crypta-show-2.png"),
+    ],
+  },
+  {
+    logo: require("../../assets/works/storify.png"),
+    cover: require("../../assets/dogs/kenai.png"),
+    specs: [
+      "Typescript",
+      "React Hooks",
+      "React Context",
+      "Reanimated2",
+      "Biometric auth",
+      "i18n localization",
+      "Dark and Light modes",
+      "MMKV local storage",
+      "Data encryption with passprase",
+      "Performant",
+    ],
+    features: [
+      "Store passwords locally with the option to encrypt them",
+      "Restrict app usage with a password or a fingerprint",
+      "Supported spanish and english languages",
+      "Back up your data exporting it to wherever you want",
+    ],
+    resume: {
+      title: "Storify",
+      subtitle: "A password manager app",
+      intro: "Design and Development entirely by me",
+      link: "https://crypta.app",
+      description:
+        "It let's the user manage them passwords without using any clouds services so he can be sure that the info is always secured in the device",
+    },
+    previews: [
+      require("../../assets/works/storify-show.jpg"),
+      require("../../assets/works/storify-show-2.jpg"),
+    ],
   },
 ];
