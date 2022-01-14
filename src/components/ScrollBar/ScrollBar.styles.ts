@@ -11,7 +11,7 @@ const styles = StyleSheet.create({
     zIndex: 10,
   },
   scrollBar: {
-    backgroundColor: "#ffffff0f",
+    backgroundColor: "#ffffff09",
     width: 20,
     height: HEIGHT * 0.6,
     borderRadius: 20,
