@@ -1,5 +1,5 @@
 import React from "react";
-import { Text } from "react-native";
+import Text from "../Text/Text";
 import styles from "./SmallTitle.styles";
 
 interface SmallTitleProps {
@@ -7,7 +7,11 @@ interface SmallTitleProps {
 }
 
 function SmallTitle({ title }: SmallTitleProps) {
-  return <Text style={styles.wrapper}>{title}</Text>;
+  return (
+    <Text font="bold" style={styles.wrapper}>
+      {title}
+    </Text>
+  );
 }
 
 export default SmallTitle;

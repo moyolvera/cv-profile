@@ -1,15 +1,13 @@
 import React, { useEffect } from "react";
-import { View, Text } from "react-native";
+import { View } from "react-native";
 import Animated, {
-  Extrapolation,
-  interpolate,
   useAnimatedStyle,
   useSharedValue,
   withDelay,
-  withSpring,
   withTiming,
 } from "react-native-reanimated";
 import styles, { BAR_SIZE } from "./Skill.styles";
+import Text from "../Text/Text";
 
 interface SkillProps {
   title: string;
@@ -30,7 +28,7 @@ function Skill({ title, percentage, color }: SkillProps) {
 
   const textStyle = useAnimatedStyle(
     () => ({
-      width: 65,
+      width: 44,
       opacity: opacity.value,
     }),
     []
@@ -45,7 +43,7 @@ function Skill({ title, percentage, color }: SkillProps) {
     <View style={styles.wrapper}>
       <View
         style={{
-          width: 65,
+          width: 44,
           alignItems: "center",
         }}
       >
@@ -53,13 +51,16 @@ function Skill({ title, percentage, color }: SkillProps) {
           {percentage && (
             <Animated.View style={animatedStyle}>
               <Animated.View style={textStyle}>
-                <Text style={styles.title}>{title}</Text>
+                <Text font="light" style={styles.title}>
+                  {title}
+                </Text>
               </Animated.View>
               <View
                 style={[
                   styles.progress,
                   {
                     backgroundColor: color,
+                    shadowColor: color,
                     height: BAR_SIZE * (percentage / 100),
                   },
                 ]}

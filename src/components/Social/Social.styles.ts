@@ -4,8 +4,7 @@ const styles = StyleSheet.create({
   wrapper: {
     flexDirection: "row",
     marginTop: 16,
-    paddingHorizontal: 30,
-    justifyContent: "center",
+    paddingHorizontal: 10,
   },
   item: {
     marginHorizontal: 8,

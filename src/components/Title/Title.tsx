@@ -1,5 +1,5 @@
 import React from "react";
-import { Text } from "react-native";
+import Text from "../Text/Text";
 import styles from "./Title.styles";
 
 interface TitleProps {
@@ -7,7 +7,11 @@ interface TitleProps {
 }
 
 function Title({ text }: TitleProps) {
-  return <Text style={styles.wrapper}>{text}</Text>;
+  return (
+    <Text font="bold" style={styles.wrapper}>
+      {text}
+    </Text>
+  );
 }
 
 export default Title;

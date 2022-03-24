@@ -1,6 +1,6 @@
 import React from "react";
-import { Text } from "react-native";
 import styles from "./Intro.styles";
+import Text from "../Text/Text";
 
 interface IntroProps {
   about: string;

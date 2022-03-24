@@ -15,7 +15,7 @@ const styles = StyleSheet.create({
     width: 280,
     height: 280,
     borderRadius: 140,
-    backgroundColor: "#161616",
+    backgroundColor: "#fff",
     position: "absolute",
     elevation: 4,
     justifyContent: "center",
@@ -34,7 +34,7 @@ const styles = StyleSheet.create({
     width: 8,
     height: 8,
     borderRadius: 8 / 2,
-    backgroundColor: "#00b8cb",
+    backgroundColor: "#32313E",
   },
   archive: {
     position: "absolute",
@@ -77,7 +77,7 @@ const styles = StyleSheet.create({
     ],
   },
   menuWrapper: {
-    backgroundColor: "#00b8cb",
+    backgroundColor: "#32313E",
     width: 40,
     height: 40,
     justifyContent: "center",

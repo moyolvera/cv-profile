@@ -76,7 +76,7 @@ function Fab({}: FabProps) {
           <Feather
             name="archive"
             size={26}
-            color={name === "Archive" ? "#00b8cb" : "white"}
+            color={name === "Archive" ? "#32313E" : "#ccc"}
           />
         </TouchableOpacity>
         <TouchableOpacity
@@ -88,7 +88,7 @@ function Fab({}: FabProps) {
           <Feather
             name="user"
             size={26}
-            color={name === "Personal" ? "#00b8cb" : "white"}
+            color={name === "Personal" ? "#32313E" : "#ccc"}
           />
         </TouchableOpacity>
         <TouchableOpacity
@@ -100,7 +100,7 @@ function Fab({}: FabProps) {
           <MaterialCommunityIcons
             name="dog"
             size={26}
-            color={name === "Dogs" ? "#00b8cb" : "white"}
+            color={name === "Dogs" ? "#32313E" : "#ccc"}
           />
         </TouchableOpacity>
         <TouchableOpacity
@@ -112,12 +112,12 @@ function Fab({}: FabProps) {
           <MaterialCommunityIcons
             name="home"
             size={26}
-            color={name === "Home" ? "#00b8cb" : "white"}
+            color={name === "Home" ? "#32313E" : "#ccc"}
           />
         </TouchableOpacity>
       </Animated.View>
       <TouchableOpacity onPress={toggle} style={styles.menuWrapper}>
-        <Feather name="menu" size={20} color="white" />
+        <Feather name="menu" size={20} color="#ccc" />
       </TouchableOpacity>
     </View>
   );

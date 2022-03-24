@@ -19,6 +19,7 @@ import ScrollBar from "./ScrollBar/ScrollBar";
 import Skill from "./Skills/Skills";
 import SmallTitle from "./SmallTitle/SmallTitle";
 import Social from "./Social/Social";
+import Text from "./Text/Text";
 import Title from "./Title/Title";
 import WhatCanIDo from "./WhatCanIDo/WhatCanIDo";
 import Wording from "./Wording/Wording";
@@ -47,6 +48,7 @@ export {
   Skill,
   SmallTitle,
   Social,
+  Text,
   Title,
   WhatCanIDo,
   Wording,

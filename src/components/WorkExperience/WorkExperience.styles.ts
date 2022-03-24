@@ -13,7 +13,7 @@ const styles = StyleSheet.create({
   line: {
     flex: 1,
     width: "100%",
-    backgroundColor: "#00b8cb2f",
+    backgroundColor: "#32313E",
     borderRadius: 3,
   },
   yearWrapper: {
@@ -29,18 +29,18 @@ const styles = StyleSheet.create({
   year: {
     fontSize: 12,
     fontWeight: "bold",
-    color: "white",
+    color: "#32313E",
   },
   wrapper: {
     marginBottom: 20,
     justifyContent: "center",
   },
   subtitle: {
-    color: "#fff",
+    color: "#32313E",
     fontSize: 12,
   },
   title: {
-    color: "#fff",
+    color: "#32313E",
     fontWeight: "bold",
   },
   blurWrapper: {

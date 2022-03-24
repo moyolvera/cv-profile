@@ -12,7 +12,7 @@ const styles = StyleSheet.create({
   text: {
     marginTop: 10,
     fontSize: 12,
-    color: "white",
+    color: "#32313E",
   },
 });
 

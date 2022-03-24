@@ -1,6 +1,6 @@
 import React from "react";
 import { LinearGradient } from "expo-linear-gradient";
-import { Text } from "react-native";
+import Text from "../Text/Text";
 import styles, { END_GRADIENT, START_GRADIENT } from "./LargeHeader.styles";
 
 interface LargeHeaderProps {
@@ -17,7 +17,9 @@ function LargeHeader({ subtitle, title }: LargeHeaderProps) {
       style={styles.wrapper}
     >
       <Text style={styles.subtitle}>{subtitle}</Text>
-      <Text style={styles.title}>{title}</Text>
+      <Text font="bold" style={styles.title}>
+        {title}
+      </Text>
     </LinearGradient>
   );
 }

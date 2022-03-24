@@ -1,61 +1,19 @@
 import React from "react";
-import { BlurView } from "expo-blur";
-import { LinearGradient } from "expo-linear-gradient";
-import { View, ImageBackground, Platform, StatusBar } from "react-native";
+import { View, StatusBar, StyleProp, ViewStyle } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
-import styles, {
-  GRADIENT_COLORS,
-  GRADIENT_END,
-  GRADIENT_LOCATIONS,
-  GRADIENT_START,
-} from "./Background.styles";
-import COMMON_STYLES from "../../theme/theme";
+import styles from "./Background.styles";
 
 interface BackgroundProps {
   children: React.ReactNode;
+  style?: StyleProp<ViewStyle>;
 }
 
-interface WrapperProps {
-  isImage: boolean;
-  children: React.ReactNode;
-}
-
-function Wrapper({ isImage, children }: WrapperProps) {
-  return isImage ? (
-    <ImageBackground
-      source={require("../../../assets/dark-bg.png")}
-      style={styles.image}
-    >
-      {children}
-    </ImageBackground>
-  ) : (
-    <ImageBackground
-      source={require("../../../assets/dark-bg.png")}
-      style={styles.image}
-    >
-      <View style={[styles.image, styles.dark]}>{children}</View>
-    </ImageBackground>
-  );
-}
-
-function Background({ children }: BackgroundProps) {
+function Background({ children, style }: BackgroundProps) {
   return (
-    <View style={styles.wrapper}>
+    <View style={[styles.wrapper, style]}>
       <StatusBar barStyle="light-content" backgroundColor="black" />
       <SafeAreaView>
-        <LinearGradient
-          colors={GRADIENT_COLORS}
-          start={GRADIENT_START}
-          end={GRADIENT_END}
-          locations={GRADIENT_LOCATIONS}
-          style={styles.gradient}
-        >
-          <Wrapper isImage={Platform.OS !== "android"}>
-            <BlurView tint="dark" intensity={40} style={styles.blur}>
-              {children}
-            </BlurView>
-          </Wrapper>
-        </LinearGradient>
+        <View style={styles.image}>{children}</View>
       </SafeAreaView>
     </View>
   );

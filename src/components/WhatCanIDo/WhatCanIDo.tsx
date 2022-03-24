@@ -1,9 +1,10 @@
 import React from "react";
-import { View, Text, TouchableOpacity, Modal, StatusBar } from "react-native";
+import { View, TouchableOpacity, Modal, StatusBar } from "react-native";
 import { GestureHandlerRootView } from "react-native-gesture-handler";
 import { Feather } from "@expo/vector-icons";
 import { MotiView } from "moti";
 
+import Text from "../Text/Text";
 import BlurItem from "../BlurItem/BlurItem";
 import styles from "./WhatCanIDo.styles";
 import COMMON_STYLES from "../../theme/theme";
@@ -57,7 +58,9 @@ function WhatCanIDo({
             blurStyle={[COMMON_STYLES.flex, styles.mainSkillWrapper]}
           >
             <Feather name={mainSkill.icon} size={38} color="#fff" />
-            <Text style={styles.mainSkill}>{mainSkill.name}</Text>
+            <Text font="bold" style={styles.mainSkill}>
+              {mainSkill.name}
+            </Text>
           </BlurItem>
         </MotiView>
         <View style={styles.secondColumnWrapper}>
@@ -71,7 +74,9 @@ function WhatCanIDo({
               blurStyle={styles.secondSkillWrapper}
             >
               <Feather name={secondSkill.icon} size={26} color="#fff" />
-              <Text style={styles.secondSkill}>{secondSkill.name}</Text>
+              <Text font="bold" style={styles.secondSkill}>
+                {secondSkill.name}
+              </Text>
             </BlurItem>
           </MotiView>
           <View style={styles.extraSkillsWrapper}>
@@ -88,7 +93,11 @@ function WhatCanIDo({
               <BlurItem
                 small
                 onPress={() => setSelectedSkill(thirdSkill)}
-                style={[COMMON_STYLES.center, COMMON_STYLES.fullWidth]}
+                style={[
+                  COMMON_STYLES.center,
+                  COMMON_STYLES.fullWidth,
+                  styles.primaryBackground,
+                ]}
               >
                 <Feather name={thirdSkill.icon} size={26} color="#fff" />
               </BlurItem>
@@ -106,7 +115,11 @@ function WhatCanIDo({
               <BlurItem
                 small
                 onPress={() => setSelectedSkill(fourthSkill)}
-                style={[COMMON_STYLES.center, COMMON_STYLES.fullWidth]}
+                style={[
+                  COMMON_STYLES.center,
+                  COMMON_STYLES.fullWidth,
+                  styles.primaryBackground,
+                ]}
               >
                 <Feather name={fourthSkill.icon} size={26} color="#fff" />
               </BlurItem>
@@ -120,7 +133,9 @@ function WhatCanIDo({
           <GestureHandlerRootView style={COMMON_STYLES.flex}>
             <CanCard skill={selectedSkill} />
             <TouchableOpacity style={styles.closeWrapper} onPress={closeModal}>
-              <Text style={styles.close}>Close</Text>
+              <Text font="bold" style={styles.close}>
+                Close
+              </Text>
             </TouchableOpacity>
           </GestureHandlerRootView>
         </Modal>

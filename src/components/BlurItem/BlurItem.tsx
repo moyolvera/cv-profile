@@ -44,13 +44,9 @@ function BlurItem({
 
   return (
     <Wrapper contentStyle={wrapperStyle} onPress={onPress}>
-      <BlurView
-        tint="dark"
-        intensity={10}
-        style={[small ? styles.smallPadding : styles.padding, blurStyle]}
-      >
+      <View style={[small ? styles.smallPadding : styles.padding, blurStyle]}>
         {children}
-      </BlurView>
+      </View>
     </Wrapper>
   );
 }

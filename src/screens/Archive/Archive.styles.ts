@@ -1,6 +1,9 @@
 import { StyleSheet } from "react-native";
 
 const styles = StyleSheet.create({
+  blackBackground: {
+    backgroundColor: "#000",
+  },
   backWrapper: {
     position: "absolute",
     top: 10,

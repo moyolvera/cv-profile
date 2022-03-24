@@ -1,16 +1,16 @@
 import { StyleSheet } from "react-native";
 
-export const BAR_SIZE = 160;
+export const BAR_SIZE = 110;
 
 const styles = StyleSheet.create({
   wrapper: {
-    marginBottom: 10,
+    marginBottom: 0,
   },
   title: {
     textAlign: "center",
     fontSize: 12,
     fontWeight: "bold",
-    color: "#fff",
+    color: "#32313E",
     top: -35,
     alignSelf: "center",
     marginBottom: 15,
@@ -27,6 +27,7 @@ const styles = StyleSheet.create({
     width: 20,
     alignSelf: "center",
     borderRadius: 20,
+    elevation: 4,
   },
 });
 

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { ScrollView, View } from "react-native";
+import { ScrollView, StatusBar, View } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 import { AnimatePresence } from "moti";
 import { PanGestureHandlerGestureEvent } from "react-native-gesture-handler";
@@ -120,7 +120,8 @@ function Archive({}: ArchiveProps) {
   }
 
   return (
-    <Background>
+    <Background style={styles.blackBackground}>
+      <StatusBar barStyle="light-content" backgroundColor="#000" />
       <View style={styles.backWrapper}>
         <RoundButton onPress={goBack} icon="chevron-left" />
       </View>
@@ -128,27 +129,27 @@ function Archive({}: ArchiveProps) {
       <View style={styles.coverWrapper}>
         <AnimatePresence>
           {index === 0 && (
-            <CoverImage image={require("../../../assets/dogs/kenai.png")} />
+            <CoverImage image={require("../../../assets/kenailabs-bg.png")} />
           )}
         </AnimatePresence>
         <AnimatePresence>
           {index === -1 && (
-            <CoverImage image={require("../../../assets/dogs/koda-2.png")} />
+            <CoverImage image={require("../../../assets/kenailabs-bg.png")} />
           )}
         </AnimatePresence>
         <AnimatePresence>
           {index === -2 && (
-            <CoverImage image={require("../../../assets/dogs/cabo-2.png")} />
+            <CoverImage image={require("../../../assets/kenailabs-bg.png")} />
           )}
         </AnimatePresence>
         <AnimatePresence>
           {index === -3 && (
-            <CoverImage image={require("../../../assets/dogs/coli.png")} />
+            <CoverImage image={require("../../../assets/kenailabs-bg.png")} />
           )}
         </AnimatePresence>
         <AnimatePresence>
           {index === -4 && (
-            <CoverImage image={require("../../../assets/dogs/cabo.png")} />
+            <CoverImage image={require("../../../assets/kenailabs-bg.png")} />
           )}
         </AnimatePresence>
       </View>

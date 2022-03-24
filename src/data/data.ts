@@ -27,7 +27,7 @@ export const WHAT_CAN_I_DO: WhatCanIDoProps = {
     icon: "settings",
     name: "Performance",
     description:
-      "I can optimize and profile code using React Native's performance tools.\nI can identify potential bottlenecks and implement strategies to prevent and fix them.\nI have a very good uderstanding of the React Native architecture including the new refactor that facebook is building with technologies like JSI\nI have experience with the latest performance tools such as React Native's DevTools, and I have worked with the latest performance tools such as Chrome DevTools, and more",
+      "I can optimize and profile code using React Native's performance tools.\nI can identify potential bottlenecks and implement strategies to prevent and fix them.\nI have a very good uderstanding of the React Native architecture including the new refactor that facebook is building with technologies like JSI\nI have experience with the latest performance tools such as Flipper and the RN Debugger, and I have worked with the latest performance tools such as DevTools Profiling helper, and more",
   },
 };
 
@@ -40,6 +40,7 @@ export const WORK_EXPERIENCE: WorkExperienceItem[] = [
     date: "2021 - Present",
     location: "AGS, MX - Remote",
     year: 2021,
+    icon: "smartphone",
   },
   {
     id: "2-tcp",
@@ -49,6 +50,7 @@ export const WORK_EXPERIENCE: WorkExperienceItem[] = [
     date: "2020 - 2021",
     location: "TX, USA - Remote",
     year: 2020,
+    icon: "smartphone",
   },
   {
     id: "3-improving",
@@ -58,6 +60,7 @@ export const WORK_EXPERIENCE: WorkExperienceItem[] = [
     date: "2019 - 2020",
     location: "AGS, MX - Remote",
     year: 2019,
+    icon: "smartphone",
   },
   {
     id: "4-ssf",
@@ -67,6 +70,7 @@ export const WORK_EXPERIENCE: WorkExperienceItem[] = [
     date: "2018 - 2019",
     location: "GDL, MX",
     year: 2018,
+    icon: "smartphone",
   },
   {
     id: "5-visoor",
@@ -76,6 +80,7 @@ export const WORK_EXPERIENCE: WorkExperienceItem[] = [
     date: "2017 - 2018",
     location: "AGS, MX",
     year: 2017,
+    icon: "monitor",
   },
   {
     id: "6-gplatform",
@@ -85,6 +90,7 @@ export const WORK_EXPERIENCE: WorkExperienceItem[] = [
     date: "2016 - 2017",
     location: "AGS, MX",
     year: 2016,
+    icon: "monitor",
   },
 ];
 

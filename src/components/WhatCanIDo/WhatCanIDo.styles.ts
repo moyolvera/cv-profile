@@ -1,5 +1,5 @@
 import { StyleSheet } from "react-native";
-import { HEIGHT, WIDTH } from "../../constants";
+import { WIDTH } from "../../constants";
 
 const styles = StyleSheet.create({
   wrapper: {
@@ -10,7 +10,7 @@ const styles = StyleSheet.create({
     width: (WIDTH - 40) / 2 - 10,
   },
   primaryBackground: {
-    backgroundColor: "#00b8cb",
+    backgroundColor: "#32313E",
   },
   mainSkillWrapper: {
     justifyContent: "flex-end",
@@ -28,6 +28,7 @@ const styles = StyleSheet.create({
   secondSkillWrapper: {
     justifyContent: "center",
     alignItems: "flex-end",
+    backgroundColor: "#32313E",
   },
   secondSkill: {
     marginTop: 10,

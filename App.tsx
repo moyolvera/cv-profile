@@ -7,6 +7,7 @@ import * as SplashScreen from "expo-splash-screen";
 import { LogBox } from "react-native";
 import { Archive, Dogs, Home, Personal } from "./src/screens";
 import { GestureHandlerRootView } from "react-native-gesture-handler";
+import { useFonts } from "expo-font";
 import COMMON_STYLES from "./src/theme/theme";
 
 LogBox.ignoreLogs(["VirtualizedLists should never be nested"]);
@@ -21,7 +22,13 @@ export type RootStackScreensList = {
 const Stack = createNativeStackNavigator<RootStackScreensList>();
 
 function App() {
-  const [isReady, setIsReady] = React.useState(false);
+  const [isNavigationReady, setNavigationIsReady] = React.useState(false);
+  const [loaded] = useFonts({
+    "Lato-Regular": require("./assets/fonts/Lato-Regular.ttf"),
+    "Lato-Light": require("./assets/fonts/Lato-Light.ttf"),
+    "Lato-Black": require("./assets/fonts/Lato-Black.ttf"),
+    "Lato-Bold": require("./assets/fonts/Lato-Bold.ttf"),
+  });
 
   React.useEffect(() => {
     async function prepare() {
@@ -29,8 +36,6 @@ function App() {
         await SplashScreen.preventAutoHideAsync();
       } catch (error) {
         console.warn(error);
-      } finally {
-        setIsReady(true);
       }
     }
 
@@ -42,8 +47,14 @@ function App() {
       await SplashScreen.hideAsync();
     } catch (error) {
       console.warn(error);
+    } finally {
+      setNavigationIsReady(true);
     }
-  }, [isReady]);
+  }, []);
+
+  if (!loaded) {
+    return null;
+  }
 
   return (
     <GestureHandlerRootView style={COMMON_STYLES.flex}>

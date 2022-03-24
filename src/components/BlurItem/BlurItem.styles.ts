@@ -9,12 +9,13 @@ const styles = StyleSheet.create({
   },
   wrapper: {
     borderRadius: 6,
-    borderWidth: 1,
-    borderColor: "#00b8cb5f",
+    backgroundColor: "#DDF8FF",
     overflow: "hidden",
+    elevation: 5,
+    shadowColor: "#32313E",
   },
   padding: {
-    padding: 20,
+    padding: 12,
   },
   smallPadding: {
     paddingHorizontal: 10,

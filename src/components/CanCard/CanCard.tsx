@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { Feather } from "@expo/vector-icons";
-import { View, Text } from "react-native";
+import { View } from "react-native";
 import styles from "./CanCard.styles";
 import Animated, {
   useSharedValue,
@@ -14,6 +14,7 @@ import {
   PanGestureHandler,
   PanGestureHandlerGestureEvent,
 } from "react-native-gesture-handler";
+import Text from "../Text/Text";
 import { Capability } from "../../types/types";
 
 interface CanCardProps {
@@ -76,7 +77,9 @@ function CanCard({ skill }: CanCardProps) {
           <Animated.View style={[rotationStyles, styles.modalWrapper]}>
             <View style={styles.modalContentWrapper}>
               <Feather name={skill.icon} size={70} color="#fff" />
-              <Text style={styles.modalText}>{skill.name}</Text>
+              <Text font="bold" style={styles.modalText}>
+                {skill.name}
+              </Text>
             </View>
           </Animated.View>
         </Animated.View>

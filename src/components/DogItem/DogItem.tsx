@@ -1,5 +1,5 @@
-import React, { useEffect } from "react";
-import { Image, ScrollView, Text, TouchableOpacity, View } from "react-native";
+import React from "react";
+import { Image, TouchableOpacity, View } from "react-native";
 import { Feather } from "@expo/vector-icons";
 import { LinearGradient } from "expo-linear-gradient";
 import Animated, {
@@ -10,6 +10,7 @@ import Animated, {
   useSharedValue,
   withTiming,
 } from "react-native-reanimated";
+import Text from "../Text/Text";
 import { HEIGHT, WIDTH } from "../../constants";
 import COMMON_STYLES from "../../theme/theme";
 import DogTitle from "../DogTitle/DogTitle";

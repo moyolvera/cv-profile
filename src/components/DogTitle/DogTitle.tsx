@@ -1,5 +1,5 @@
 import React from "react";
-import { Text } from "react-native";
+import Text from "../Text/Text";
 import styles from "./DogTitle.styles";
 
 interface DogTitleProps {
@@ -11,8 +11,12 @@ interface DogTitleProps {
 function DogTitle({ name, date, description }: DogTitleProps) {
   return (
     <>
-      <Text style={styles.name}>{name}</Text>
-      <Text style={styles.date}>{date}</Text>
+      <Text font="bold" style={styles.name}>
+        {name}
+      </Text>
+      <Text font="bold" style={styles.date}>
+        {date}
+      </Text>
       <Text style={styles.description}>{description}</Text>
     </>
   );

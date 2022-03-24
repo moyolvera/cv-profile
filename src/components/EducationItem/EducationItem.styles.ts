@@ -16,27 +16,27 @@ const styles = StyleSheet.create({
   },
   year: {
     fontSize: 12,
-    color: "#fff",
+    color: "#32313E",
   },
   title: {
     fontWeight: "bold",
     fontSize: 16,
-    color: "#fff",
+    color: "#32313E",
   },
   location: {
     fontSize: 12,
     fontWeight: "100",
-    color: "#fff",
+    color: "#32313E",
   },
   itemWrapper: {
     flex: 1,
     padding: 10,
-    backgroundColor: "#00b8cb0f",
+    backgroundColor: "#DDF8FF",
   },
   description: {
     fontSize: 10,
     width: WIDTH / 2,
-    color: "#fff",
+    color: "#32313E",
   },
 });
 

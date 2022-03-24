@@ -1,9 +1,11 @@
 import React from "react";
-import { View, Text } from "react-native";
+import { View } from "react-native";
+import Text from "../Text/Text";
 import BlurItem from "../BlurItem/BlurItem";
 import { WIDTH } from "../../constants";
 import { WorkExperienceItem } from "../../types/types";
 import styles from "./WorkExperience.styles";
+import { Feather } from "@expo/vector-icons";
 
 interface WorkExperienceProps {
   experience: WorkExperienceItem[];
@@ -31,11 +33,16 @@ function WorkExperience({ experience }: WorkExperienceProps) {
               index % 2 === 0 ? { right: WIDTH / 4.5 } : { left: WIDTH / 4.5 },
             ]}
           >
-            <Text style={styles.year}>{item.year}</Text>
+            <Feather name={item.icon} size={24} color="#32313E" />
+            <Text font="bold" style={styles.year}>
+              {item.year}
+            </Text>
           </View>
           <BlurItem style={styles.blurWrapper} blurStyle={styles.blurInner}>
             <Text style={styles.subtitle}>{item.subtitle}</Text>
-            <Text style={styles.title}>{item.title}</Text>
+            <Text font="bold" style={styles.title}>
+              {item.title}
+            </Text>
           </BlurItem>
         </View>
       ))}

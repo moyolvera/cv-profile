@@ -5,6 +5,9 @@ const COMMON_STYLES = StyleSheet.create({
   flex: {
     flex: 1,
   },
+  flexRow: {
+    flexDirection: "row",
+  },
   dimensions: {
     width: WIDTH,
     height: HEIGHT,

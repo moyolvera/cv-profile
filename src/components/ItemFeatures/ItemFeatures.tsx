@@ -1,5 +1,5 @@
 import React from "react";
-import { View, Text } from "react-native";
+import Text from "../Text/Text";
 import styles from "./ItemFeatures.styles";
 
 interface ItemFeaturesProps {

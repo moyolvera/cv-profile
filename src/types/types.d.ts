@@ -15,6 +15,7 @@ export type WorkExperienceItem = {
   date: string;
   location: string;
   year: number;
+  icon: "smartphone" | "monitor";
 };
 
 export type EducationItem = {

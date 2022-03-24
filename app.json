@@ -1,6 +1,6 @@
 {
   "expo": {
-    "name": "neh",
+    "name": "Moy - CV",
     "slug": "neh",
     "version": "1.0.0",
     "orientation": "portrait",
@@ -28,6 +28,6 @@
     "web": {
       "favicon": "./assets/favicon.png"
     },
-    "description": ""
+    "description": "This is an app to check my CV. Work in progress, mostly just to practice, design, animations and more react native stuff"
   }
 }

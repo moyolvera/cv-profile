@@ -1,5 +1,5 @@
 import React from "react";
-import { View, Text } from "react-native";
+import { View } from "react-native";
 import {
   PanGestureHandler,
   PanGestureHandlerGestureEvent,
@@ -10,6 +10,7 @@ import Animated, {
   useSharedValue,
   withSpring,
 } from "react-native-reanimated";
+import Text from "../Text/Text";
 import { EducationItem } from "../../types/types";
 import styles from "./EducationItem.styles";
 
@@ -61,7 +62,9 @@ function EducationItemComponent({ item }: EducationItemComponentProps) {
         <View style={styles.itemWrapper}>
           <Text style={styles.year}>{item.year}</Text>
           <Text>
-            <Text style={styles.title}>{item.title}</Text>
+            <Text style={styles.title} font="bold">
+              {item.title}
+            </Text>
             <Text style={styles.location}> • </Text>
             <Text style={styles.location}>{item.location}</Text>
           </Text>
